@@ -7,13 +7,13 @@ Compute the similarities between a query molecule and a list of other molecules 
 
 usage: statsim.pl [-options] query_smiles.smi list_of_smiles.smi [alternative_freq_mtx]
 
-options: -v  verbose output 
-         -d  debugging output. Also enables verbose output
+options: -v  verbose output; 
+         -d  debugging output. Also enables verbose output;
          -m  print atom to atom assignment matrix between query compound
-            and the respective other compound 
+            and the respective other compound; 
 If alternative_freq_mtx is provided, those will be used instead of atpairfrq{1-4}.mtx
 Output is written to standard out in space separated format:
-SMILES compound-name harmonic-mean geometric-mean arithmetic-mean divided-by-smaller-molecule logarithmic scaling
+SMILES compound-name harmonic-mean geometric-mean arithmetic-mean divided-by-smaller-molecule logarithmic-scaling
 
 limitations:
 SMILES containing lower case letters (e.g. c1ccccc1) are not allowed
@@ -31,9 +31,9 @@ Outlier compounds are marked as "N"
 
 usage: recsim.pl [-options] list_of_smiles.smi [alternative_freq_mtx]
 
-options: -v  verbose output 
-         -d  debugging output. Also enables verbose output
-if alternative_freq_mtx is provided, those will be used instead of atpairfrq{1-4}.mtx
+options: -v  verbose output; 
+         -d  debugging output. Also enables verbose output;
+If alternative_freq_mtx is provided, those will be used instead of atpairfrq{1-4}.mtx
 Output is written to standard out in space separated format:
 (symmetic) matrix of simililarities between the compounds
 10 NN compounds
@@ -56,5 +56,5 @@ Compute the distributions/frequencies of atom pair interactions
 
 usage: distrib.pl [-options] list_of_hin_files.txt
 
-options: -<matrix_name>  override "atpairfrq" as matrix name 
+options: -<matrix_name>  override "atpairfrq" as matrix name; 
           <matrix_name>.mtx  matrix files will be generated
