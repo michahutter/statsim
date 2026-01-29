@@ -1,4 +1,4 @@
-# statsim
+# computing the statistical similarity 
 Chemical Similarity derived from Statistical Evaluation of Pharmaceutical Drugs
 
 statsim.pl
@@ -36,3 +36,22 @@ Output is written to standard out in space separated format:
 (symmetic) matrix of simililarities between the compounds
 10 NN compounds
 DBSCAN results
+
+Generating alternative frequency matrices for your set of compounds:
+Convert SMILES to individual .hin files that contain the required atom-types
+
+smi2hin.pl
+
+convert one or multiple SMILES from a .smi file to multiple .hin files
+
+usage: smi2hin.pl -mm infile.smi
+limitations: aromaticity defined by lower case letters does not work!
+
+distrib.pl
+
+Compute the distributions/frequencies of atom pair interactions
+
+usage: distrib.pl [-options] list_of_hin_files.txt
+
+options: -<matrix_name>  override "atpairfrq" as matrix name 
+          <matrix_name>.mtx  matrix files will be generated
