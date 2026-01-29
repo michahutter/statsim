@@ -13,7 +13,7 @@ options: -v  verbose output
             and the respective other compound 
 If alternative_freq_mtx is provided, those will be used instead of atpairfrq{1-4}.mtx
 Output is written to standard out in space separated format:
-SMILES compound-name harmonic-mean geometric-mean arithmetic-mean divided-by-smaller-molecule
+SMILES compound-name harmonic-mean geometric-mean arithmetic-mean divided-by-smaller-molecule logarithmic scaling
 
 limitations:
 SMILES containing lower case letters (e.g. c1ccccc1) are not allowed
