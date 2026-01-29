@@ -1,5 +1,6 @@
 # computing the statistical similarity 
 Chemical Similarity derived from Statistical Evaluation of Pharmaceutical Drugs
+(M.C. Hutter, to be published)
 
 statsim.pl
 Compute the similarities between a query molecule and a list of other molecules (SMILES format)
@@ -21,6 +22,7 @@ inorganic elements and counter ions (e.g. Fe, Mg, Na, K) should be removed
 
 
 recsim.pl 
+
 Compute the inter-similarities between a molecules given as a list of SMILES.
 To determine suitable query molecules it performs also a 10 nearest neighbor 
 approach as sum of ranks/scores, as well as DBSCAN cluster algorithm.
@@ -42,9 +44,10 @@ Convert SMILES to individual .hin files that contain the required atom-types
 
 smi2hin.pl
 
-convert one or multiple SMILES from a .smi file to multiple .hin files
+convert SMILES from a .smi file to individual .hin files
 
 usage: smi2hin.pl -mm infile.smi
+
 limitations: aromaticity defined by lower case letters does not work!
 
 distrib.pl
